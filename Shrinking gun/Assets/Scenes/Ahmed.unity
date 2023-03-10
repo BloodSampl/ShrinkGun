@@ -1029,6 +1029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4ee0cb9a7eef8499d84163773df5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pivotPoint: {fileID: 588251251}
+  mouseSensetivity: 2
 --- !u!1 &1465784187
 GameObject:
   m_ObjectHideFlags: 0
