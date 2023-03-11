@@ -8,6 +8,8 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] float mouseSensetivity = 1f;
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;
+    [SerializeField] Transform groundPoint;
+    [SerializeField] LayerMask groundLayer;
     Rigidbody rb;
     Vector2 mouseInput;
     Vector3 moveInput;
@@ -55,7 +57,9 @@ public class PlayerMovementController : MonoBehaviour
     }
     void PlayerJump()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        isGrounded = Physics.Raycast(groundPoint.position, Vector3.down, .25f, groundLayer);
+
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + jumpForce, rb.velocity.z);
         }
