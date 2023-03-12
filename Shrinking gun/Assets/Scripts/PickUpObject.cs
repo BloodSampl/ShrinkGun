@@ -37,7 +37,7 @@ public class PickUpObject : MonoBehaviour
     {
         if (pickUpDistance < 4)
         {
-            if (Input.GetKeyDown(KeyCode.F) && !isPicked && pickUpPoint.childCount < 1)
+            if (Input.GetKeyDown(KeyCode.F) && !isPicked && pickUpPoint.childCount < 1 && transform.localScale.x < 1.1)
             {
                 rb.isKinematic = true;
                 rb.useGravity = false;
