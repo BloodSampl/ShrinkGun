@@ -124,7 +124,7 @@ BoxCollider:
   m_GameObject: {fileID: 7290923400027292766}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -478,3 +478,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6929341438734420625, guid: c2bb194abd5bba04fb9be43b8ee6348e, type: 3}
   m_PrefabInstance: {fileID: 362371987840434031}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7290923401599727103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6929341438734420624, guid: c2bb194abd5bba04fb9be43b8ee6348e, type: 3}
+  m_PrefabInstance: {fileID: 362371987840434031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2068093107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290923401599727103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3e215fd0504ae449b1099e51af5899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigBullet: {fileID: 2736964759169551779, guid: bae7fed88b7dd6044a4d469755d2a311, type: 3}
+  smallBullet: {fileID: 2736964759169551779, guid: dcbaced9e981a6d4d98fbbfab71a6cce, type: 3}
+  bulletSpeed: 25
