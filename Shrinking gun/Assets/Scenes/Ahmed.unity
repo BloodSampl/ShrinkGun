@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -740,28 +740,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1340985872 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5391700043805226674, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
-  m_PrefabInstance: {fileID: 5391700044931540130}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1340985873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5391700043805226675, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
   m_PrefabInstance: {fileID: 5391700044931540130}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1340985879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340985872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3a55ff221fc0347886362fa852ae0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1437181901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7290923400879540892, guid: a3920f761b193104e86e3d06f962df3e, type: 3}
@@ -1058,10 +1041,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Drop panel
       objectReference: {fileID: 0}
-    - target: {fileID: 8217223130040569659, guid: 4bfe45a7381ea0d4eb727cfbaa135015, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.05
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bfe45a7381ea0d4eb727cfbaa135015, type: 3}
 --- !u!1001 &5391700044931540130
@@ -1075,29 +1054,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: object
       objectReference: {fileID: 0}
-    - target: {fileID: 5391700043805226674, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5391700043805226674, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
-      propertyPath: m_TagString
-      value: Yellow
-      objectReference: {fileID: 0}
     - target: {fileID: 5391700043805226675, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5391700043805226675, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5391700043805226675, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5391700043805226675, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 5391700043805226675, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1147,10 +1106,6 @@ PrefabInstance:
       propertyPath: pickUpPoint
       value: 
       objectReference: {fileID: 978484695}
-    - target: {fileID: 5391700043805226679, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
-      propertyPath: m_Mass
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d1678b57d43ece41adc36c9144b868e, type: 3}
 --- !u!1001 &7290923400169237841
@@ -1206,10 +1161,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7290923400879540892, guid: a3920f761b193104e86e3d06f962df3e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290923400879540894, guid: a3920f761b193104e86e3d06f962df3e, type: 3}
-      propertyPath: m_Drag
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
