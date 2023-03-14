@@ -14,12 +14,14 @@ public class PickUpObject : MonoBehaviour
     Rigidbody rb;
     BoxCollider boxCollider;
     SphereCollider sphereCollider;
+    CapsuleCollider capsuleCollider;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
         sphereCollider = GetComponent<SphereCollider>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
     }
 
     private void Update()
@@ -40,7 +42,7 @@ public class PickUpObject : MonoBehaviour
         if (pickUpDistance < 3)
         {
             if (Input.GetKeyDown(KeyCode.F) && !isPicked && pickUpPoint.childCount < 1 &&
-                transform.localScale.x < 1.1 && sphereCollider == null)
+                transform.localScale.x < 1.1 && sphereCollider == null && capsuleCollider == null)
             {
                 rb.isKinematic = true;
                 rb.useGravity = false;
@@ -50,7 +52,7 @@ public class PickUpObject : MonoBehaviour
                 isPicked = true;
             }
             if (Input.GetKeyDown(KeyCode.F) && !isPicked && pickUpPoint.childCount < 1 &&
-                transform.localScale.x < 1.1 && boxCollider == null)
+                transform.localScale.x < 1.1 && boxCollider == null && capsuleCollider == null)
             {
                 rb.isKinematic = true;
                 rb.useGravity = false;
@@ -59,11 +61,21 @@ public class PickUpObject : MonoBehaviour
                 transform.parent = pickUpPoint;
                 isPicked = true;
             }
+            if (Input.GetKeyDown(KeyCode.F) && !isPicked && pickUpPoint.childCount < 1 &&
+                transform.localScale.x < 1.1 && boxCollider == null && sphereCollider == null)
+            {
+                rb.isKinematic = true;
+                rb.useGravity = false;
+                capsuleCollider.enabled = false;
+                transform.position = pickUpPoint.position;
+                transform.parent = pickUpPoint;
+                isPicked = true;
+            }
         }
     }
     void ItemDrop()
     {
-        if (Input.GetKeyDown(KeyCode.F) && isPicked && sphereCollider == null)
+        if (Input.GetKeyDown(KeyCode.F) && isPicked && sphereCollider == null && capsuleCollider == null)
         {
             transform.parent = null;
             rb.isKinematic = false;
@@ -71,12 +83,20 @@ public class PickUpObject : MonoBehaviour
             boxCollider.enabled = true;
             isPicked = false;
         }
-        if (Input.GetKeyDown(KeyCode.F) && isPicked && boxCollider == null)
+        if (Input.GetKeyDown(KeyCode.F) && isPicked && boxCollider == null && capsuleCollider == null)
         {
             transform.parent = null;
             rb.isKinematic = false;
             rb.useGravity = true;
             sphereCollider.enabled = true;
+            isPicked = false;
+        }
+        if (Input.GetKeyDown(KeyCode.F) && isPicked && boxCollider == null && sphereCollider == null)
+        {
+            transform.parent = null;
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            capsuleCollider.enabled = true;
             isPicked = false;
         }
     }
