@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIPopUp : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class UIPopUp : MonoBehaviour
 
     public Image panelIntroBG;
     public Text panelText;
+
+    public Button replay;
+    public Button ender;
+    public Image gameover;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +27,13 @@ public class UIPopUp : MonoBehaviour
 
         panelIntroBG.enabled = false;
         panelText.enabled = false;
+
+        /*replay.enabled = false;
+        ender.enabled = false;*/
+        //gameover.enabled = false;
+        //replay.gameObject.SetActive(false);
+        //ender.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -51,6 +63,11 @@ public class UIPopUp : MonoBehaviour
         {
             panelIntroBG.enabled = true;
             panelText.enabled = true;
+        }
+
+        if(collision.gameObject.tag== "Over")
+        {
+            SceneManager.LoadScene("Game Over");
         }
     }
 }
