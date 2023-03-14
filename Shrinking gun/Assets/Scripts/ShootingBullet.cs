@@ -7,6 +7,7 @@ public class ShootingBullet : MonoBehaviour
     [SerializeField] GameObject bigBullet;
     [SerializeField] GameObject smallBullet;
     [SerializeField] float bulletSpeed;
+    [SerializeField] AudioSource shotSound;
     void Update()
     {
         ShootBig();
@@ -18,6 +19,7 @@ public class ShootingBullet : MonoBehaviour
         {
             GameObject bult = Instantiate(bigBullet, transform.position, Quaternion.identity);
             bult.GetComponent<Rigidbody>().velocity = transform.up * bulletSpeed;
+            shotSound.Play();
         }
     }
     void ShootSmall()
@@ -26,6 +28,7 @@ public class ShootingBullet : MonoBehaviour
         {
             GameObject bult = Instantiate(smallBullet, transform.position, Quaternion.identity);
             bult.GetComponent<Rigidbody>().velocity = transform.up * bulletSpeed;
+            shotSound.Play();
         }
     }
 }

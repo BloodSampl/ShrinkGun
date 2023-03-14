@@ -7,6 +7,7 @@ public class DropPoint : MonoBehaviour
     [SerializeField] string objectTag;
     [SerializeField] Transform holdPoint;
     [SerializeField] GameObject path;
+    [SerializeField] AudioSource pathSound;
 
 
     private void Update()
@@ -28,6 +29,7 @@ public class DropPoint : MonoBehaviour
             obj.transform.position = holdPoint.position;
             obj.transform.parent = holdPoint;
             path.SetActive(true);
+            pathSound.Play();
         }
     }
 }

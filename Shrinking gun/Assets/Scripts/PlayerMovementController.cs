@@ -17,6 +17,7 @@ public class PlayerMovementController : MonoBehaviour
 
     float verticalRotStore;
     bool isGrounded;
+    [SerializeField] AudioSource jumpingSound;
 
     private void Awake()
     {
@@ -62,6 +63,7 @@ public class PlayerMovementController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + jumpForce, rb.velocity.z);
+            jumpingSound.Play();
         }
     }
 }

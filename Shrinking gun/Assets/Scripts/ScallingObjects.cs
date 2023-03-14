@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScallingObjects : MonoBehaviour
 {
+    [SerializeField] AudioSource blewUpSound;
+    [SerializeField] AudioSource shrinkSound;
     private void OnCollisionEnter(Collision collision)
     {
         transform.localScale = new Vector3(Mathf.Clamp(transform.localScale.x, 0.15f, 5f),
@@ -12,10 +14,12 @@ public class ScallingObjects : MonoBehaviour
         if (collision.gameObject.CompareTag("Big"))
         {
             transform.localScale += Vector3.one;
+            blewUpSound.Play();
         }
         else if (collision.gameObject.CompareTag("Small") && transform.localScale.x > 0.15f)
         {
             transform.localScale -= Vector3.one;
+            shrinkSound.Play();
         }
     }
 }
